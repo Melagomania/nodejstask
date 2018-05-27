@@ -1,0 +1,17 @@
+{
+  "name": "njs",
+  "version": "1.0.0",
+  "description": "nodejs task",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {
+    "handlebars": "^4.0.11",
+    "mime": "^2.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "maksym_dryha",
+  "license": "ISC"
+}

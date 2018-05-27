@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!--todo: refactor template markup-->
+{{#if this.javascript}}
+  <h2>Javascript</h2>
+  <ul>
+    {{#each this.javascript}}
+      <li>
+        <span class="name">{{this}}</span>
+        <a href="{{this}}" download class="link">download</a>
+        <a href="{{this}}" download class="link" data-action="delete">delete</a>
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}
+
+{{#if this.typescript}}
+  <h2>Typescript</h2>
+  <ul>
+    {{#each this.typescript}}
+      <li>
+        <span class="name">{{this}}</span>
+        <a href="{{this}}" download class="link">download</a>
+        <a href="{{this}}" download class="link" data-action="delete">delete</a>
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}
+
+{{#if this.images}}
+  <h2>Images</h2>
+  <ul>
+    {{#each this.images}}
+      <li>
+        <span class="name">{{this.path}} {{#if this.scale}}(Retina, scale:{{this.scale}}){{/if}}</span>
+        <a href="{{this.path}}" download class="link">download</a>
+        <a href="{{this.path}}" download class="link" data-action="delete">delete</a>
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}
+{{#if this.logs}}
+  <h2>Logs</h2>
+    {{#each this.logs}}
+      <h3>{{@key}}</h3>
+      <ul>
+      {{#each this}}
+        <li>
+          <span class="name">{{this.path}} {{#if this.stream}}({{this.stream}}){{/if}}</span>
+          <a href="{{this.path}}" download class="link">download</a>
+          <a href="{{this.path}}" download class="link" data-action="delete">delete</a>
+        </li>
+      {{/each}}
+      </ul>
+    {{/each}}
+{{/if}}
+{{#if this.other}}
+  {{log this}}
+  <h2>Other</h2>
+  <ul>
+  {{#each this.other}}
+        <li>
+          <span class="name">{{this}}</span>
+          <a href="{{this}}" download class="link">download</a>
+          <a href="{{this}}" download class="link" data-action="delete">delete</a>
+        </li>
+  {{/each}}
+  </ul>
+{{/if}}
+
+<script src="script.js"></script>
+</body>
+</html>
