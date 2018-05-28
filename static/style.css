@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  margin: 15px 0;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+h3 {
+  padding: 0;
+  font-size: 18px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+li {
+
+  list-style-type: none;
+}
+
+.name {
+  margin-right: 20px;
+}
+
+.additional-info {
+  margin-right: 20px;
+}
+
+.link {
+  margin-right: 10px;
+}
